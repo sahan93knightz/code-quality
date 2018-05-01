@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!--
+  ~ This file is subject to the terms and conditions defined in
+  ~ file 'LICENSE.txt', which is part of this source code package.
+  -->
+
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<p th:text="${message}"></p>
+<div th:if="${exception != null}">
+    <p th:text="${exception.message}"></p>
+</div>
+<a th:href="@{/}">Home</a>
+</body>
+</html>

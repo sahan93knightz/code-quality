@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+  ~ This file is subject to the terms and conditions defined in
+  ~ file 'LICENSE.txt', which is part of this source code package.
+  -->
+
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Department List</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Department Name</th>
+        <th>Action</th>
+    </tr>
+    <tr th:each="department : *{departmentList}">
+        <td th:text="${department.id}"></td>
+        <td th:text="${department.name}"></td>
+        <td>
+            <form action="#" th:action="@{/department/edit}" method="get">
+                <input type="hidden" th:name="departmentId" th:value="${department.id}">
+                <input type="submit" value="Edit">
+            </form>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
