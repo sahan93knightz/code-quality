@@ -46,7 +46,7 @@ public class DepartmentController {
         }
         return ApplicationConstants.RESULT_PAGE_PATH;
     }
-
+// Test Comment
     @GetMapping("/list")
     public String departmentList(Model model) {
         try {
